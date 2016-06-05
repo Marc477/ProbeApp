@@ -1,7 +1,7 @@
 # StarWarsProbeApp
 Star Wars Rebellion Solo Probe Deck App
 
-Source code of the app here:
+The app is hosted here:
 http://starwarsrebellionsolo.com/
 
 Feel free to improve it!
