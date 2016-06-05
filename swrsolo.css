@@ -1,0 +1,220 @@
+
+/* Generic */
+
+html, body{
+    min-height: 100%;
+    background: #BBB;
+    font-family: tomaha;
+    color: #111;
+}
+
+.center{ text-align: center; width: 100%; }
+
+.fill { 
+    min-height: 100%;
+}
+
+.row-fluid{
+    float: left;
+    overflow: hidden;
+    width: 100%;
+}
+
+.col-fluid{
+    height: 100%;
+    padding-bottom: 40%;
+}
+
+.line{
+    display: block;
+    margin: 5px 0;
+    min-height: 30px;
+}
+
+.nice-btn{
+    margin: 10px 0;
+    padding: 8px 12px;
+    font-size: 18px;
+    font-weight: 200;
+    font-family: calibri;
+    color: #111;
+    background-color: #ddd;
+}
+
+.nice-select{
+    min-width: 100px;
+    padding: 5px;
+    color: #111;
+}
+
+/* Zones */
+
+.title{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #DDD;
+    margin-bottom: 20px;
+}
+
+.title h1{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 350px;
+}
+
+.left-zone{
+    position: relative;
+    background: #222;
+    color: #DDD;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+.right-zone{
+    position: relative;
+    padding: 0;
+}
+
+.display-zone{
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.display-area-title{
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+    margin-bottom: 20px;
+    background: #CCC;
+}
+
+@media screen and (max-width: 991px) {
+    .col-fluid{
+        padding-bottom: 0;
+        height: auto;
+        min-height: 30px;
+    }
+    .display-area-title{
+        border: 1px solid #333;
+    }
+}
+
+.display-area-title h3{
+    margin: 10px 25px;
+}   
+
+.display-area{
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+.card-line{
+    padding: 8px 10px;
+    border-bottom: 1px solid #555;
+}
+
+.tabs-zone{
+    display: table-row;
+    width: 100%;
+}
+
+.tab{
+    display: table-cell;
+    height: 40px;
+    padding: 5px 12px;
+    margin: 0 1%;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.tab:not(.selected):hover{
+    color: #999;
+}
+
+.tab.selected{
+    cursor: default;
+    border-top: 1px solid #DDD;
+    border-left: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+}
+
+@media screen and (max-width: 480px) {
+    .tab{
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .tab{
+        font-size: 12px;
+        padding: 4px 5px;
+    }
+}
+
+.action-option{
+    width: 100%;
+    min-height: 120px;
+    margin: 20px 0;
+}
+
+.text-zone{
+    font-size: 18px;
+    width: 100%;
+    min-height: 150px;
+    margin: 20px 0;
+}
+
+.text-area{
+    font-size: 18px;
+    margin: 10px 15px;
+}
+
+
+.top-line{
+    margin: 20px 0;
+    padding: 20px 0;
+    border-top: 1px solid #bbb;
+}
+
+.map-container{
+    position:relative;
+    padding-bottom:70%;
+    height:0;
+    overflow:hidden;
+}
+
+.map-img{
+    position:absolute; 
+    top: 0; width: 100%;
+}
+
+.map-controls{
+    position:absolute; 
+    top:0; left:0; 
+    right: 0; bottom: 0;
+    z-index: 5;
+}
+
+.map-selector{
+    position: absolute;
+    cursor:pointer;
+    background:#EEE;
+    border: 1px solid #333;
+}
+
+.map-selector-static{
+    position: absolute;
+    background:#E33;
+    border: 1px solid #333;
+}
+
+.map-selector.white{ background:#EEE; }
+.map-selector.green{ background:#3E3; }
+.map-selector.red{ background:#E33; }

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="utf-8">
+<link rel="canonical" href="http://starwarsrebellionsolo.com/" />
+<title>Star Wars Rebellion Solo Probe App</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Star Wars Rebellion Solo app">
+<meta name="keywords" content="Star Wars, Rebellion, Solo, app">
+<meta name="author" content="Marc477">
+
+<meta property="og:title" content="Star Wars Rebellion Solo Probe App" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:locale" content="en-US" />
+
+<link rel="stylesheet" type="text/css"  href="bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css"  href="swrsolo.css?v=1.03" />
+
+</head>
+<body>
+
+<div class="main container-fluid fill">
+    <div class="row-fluid fill">
+        <div class="col-fluid col-md-4 left-zone">
+            <div class="title"><h1>Star Wars Rebellion Solo Probe App</h1></div>
+            <div id="start_zone" class="line center">
+                <div><input id="start_btn" class="btn nice-btn" type="button" value="Start Basic Game" /></div>
+                <div><input id="start_advanced_btn" class="btn nice-btn" type="button" value="Start Advanced Game" /></div>
+            </div>
+            <div id="action_zone"  style="display:none;" class="line">
+                <div class="tabs-zone">
+                    <span id="tab_1" class="tab selected">Draw cards</span>
+                    <span id="tab_2" class="tab">Guess</span>
+                    <span id="tab_3" class="tab">Relocate</span>
+                    <span id="tab_4" class="tab">Abilities</span>
+                    <span id="tab_5" class="tab">More</span>
+                </div>
+                <div id="action_tab_1" class="action-option center">
+                    <input id="draw_btn" class="btn nice-btn" type="button" value="Draw a probe card" />
+                </div>
+                <div id="action_tab_2" style="display:none;" class="action-option center">
+                    <div>System: <select id="guess_select" class="nice-select">
+                        
+                    </select></div>
+                    <div><input id="guess_btn" class="btn nice-btn" type="button" value="Guess rebel base" /></div>
+                </div>
+                <div id="action_tab_3" style="display:none;" class="action-option center">
+                    <input id="relocate_btn" class="btn nice-btn" type="button" value="Establish a new rebel base" />
+                </div>
+                <div id="action_tab_4" style="display:none;" class="action-option center">
+                    <div>Before playing a special card,<br> make sure to update all red systems on <a id="the_map_link" href="javascript:;">the map</a></div>
+                    <div>
+                        <input id="interrogation_btn" style="font-size:14px; padding: 5px;" class="btn nice-btn" type="button" value="Interrogation Droid" />
+                        <input id="intercept_btn" style="font-size:14px; padding: 5px;" class="btn nice-btn" type="button" value="Intercept Transmission" />
+                        <input id="homing_btn" style="font-size:14px; padding: 5px;" class="btn nice-btn" type="button" value="Homing Beacon" />
+                    </div>
+                </div>
+                <div id="action_tab_5" style="display:none;" class="action-option center">
+                    <div id="nav_buttons" class="center">
+                        <input id="view_cards" class="btn nice-btn" type="button" value="Show cards" />
+                        <input id="view_map" class="btn nice-btn" type="button" value="Show map" />
+                    </div>
+                    <input id="new_game" class="btn nice-btn" type="button" value="Start new game?" />
+                </div>
+            </div>
+            <div id="text_zone_top" style="display:none;" class="text-zone center">
+                    
+            </div>
+            <div id="text_zone" class="text-zone top-line">
+                Welcome to this probe deck simulation app. It will help you to play Star Wars Rebellion solo without knowing where the secret rebel base is hidden.
+            </div>
+        </div>
+        <div class="col-md-8 right-zone">
+            <div id="card_zone" style="display:none;" class="display-zone">
+                <div class="display-area-title">
+                    <h3>Imperial player cards <span id="hand_count"></span></h3>
+                </div>
+                <div id="display_area" class="display-area">
+                    <div class="card-line">Card 1</div>
+                    <div class="card-line">Card 2</div>
+                    <div class="card-line">Card 3</div>
+                </div>
+            </div>
+            <div id="map_zone" style="display:none;" class="display-zone">
+                <div class="display-area-title">
+                    <h3>Rebel player base selection</h3>
+                </div>
+                <div id="text_zone_right" class="line text-area">
+                    Rebel player: Select all prefered systems for a rebel base. The app will try to select a green system first, then a white system if no green is drawn, it will never select red systems. You should set all the systems loyal or subjugated by the imperial player in red.
+                </div>
+                <div id="display_area" class="display-area">
+                    <div class="map-container">
+                        <img src="map.png" class="map-img" />
+                        <div id="map_controls" class="map-controls"> 
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="map_buttons">
+                    <div id="text_zone_right" class="line text-area">
+                        Then, select a mode to establish the rebel base:
+                    </div>
+                    <div class="line center">
+                        <input id="map_btn_all" type="button" class="btn nice-btn" value="Start of game (all cards)" />
+                        <input id="map_btn_4" type="button" class="btn nice-btn" value="Relocate base (4 cards)" />
+                        <input id="map_btn_8" type="button" class="btn nice-btn" value="Relocate base (8 cards)" />
+                        <input id="map_btn_cancel" type="button" class="btn nice-btn" value="Cancel" />
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="jquery/jquery-1.12.1.min.js"></script>
+<script src="swrsolo.js?v=1.08"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72113635-2', 'auto');
+  ga('send', 'pageview');
+  
+  setTimeout(function(){
+    ga('send', 'event', 'Control', 'Bounce Rate');
+  }, 30000);
+
+</script>
+
+</body>
+</html>
