@@ -2,7 +2,7 @@
 Star Wars Rebellion Solo Probe Deck App
 
 The app is hosted here:
-http://swsolo.ieroe.com/
+http://swsolo.madesbiens.ca/
 
 Feel free to improve it!
 
